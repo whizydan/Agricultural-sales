@@ -3,7 +3,7 @@ session_start();
 error_reporting(0);
 include('connection.php');
 
-if(isset($_POST['sign']))
+if(isset($_POST['sign_up']))
 {
 	 $name=$_POST['name'];
 	 $email=$_POST['email'];
@@ -56,7 +56,7 @@ if(isset($_POST['login']))
 	 }
 	else
 	{
-		?><script>alert('Invalid user_id or password');</script><?php
+		?><script>alert('Invalid user_id');</script><?php
 	}
 }
 ?>
@@ -242,7 +242,7 @@ body{
 					<input type="submit" name="login" value="Login">	
 					<h3>Not a member?				
 				</form>
-                <input type="button" value="signup" onClick="test()" id="si"></h3>
+                <input type="button" value="signup" onClick="test()" id="login"></h3>
 			</div>
       </div>
 </div>
@@ -260,7 +260,7 @@ body{
                     <input type="password" name="pass" class="lock" placeholder="Password">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="+1" >Profile picture:: </font> <input type="file" name="image" ><br><br>
 					<input type="submit" name="sign" value="Sign_up">	
-					<h3>Not a member?<input type="button" value="signup" onClick="test1()" id="si"></h3>				
+					<h3>Not a member?<input type="button" value="signup" onClick="test1()" id="sign_up"></h3>
 				</form>
                 
 			</div>

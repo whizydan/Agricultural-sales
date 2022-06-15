@@ -1,3 +1,66 @@
+<?php
+
+$conn = mysqli_connect("localhost", "root", "", "shopping");
+//Load Composer's autoloader
+require 'vendor/autoload.php';
+$message = "";
+
+
+if (isset($_POST['submit'])) {
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = mysqli_real_escape_string($conn, md5($_POST['pass']));
+    $mobile = mysqli_real_escape_string($conn, md5($_POST['mobile']));
+
+    if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users WHERE email='{$email}'")) > 0) {
+        $msg = "<div class='alert alert-danger'>{$email} - This email address has been already exists.</div>";
+    } else {
+        if ($password === $confirm_password) {
+            $sql = "INSERT INTO users (name, email, password, code) VALUES ('{$name}', '{$email}', '{$password}', '{$code}')";
+            $result = mysqli_query($conn, $sql);
+
+            if ($result) {
+                echo "<div style='display: none;'>";
+                //Create an instance; passing `true` enables exceptions
+                $mail = new PHPMailer(true);
+
+                try {
+                    //Server settings
+                    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+                    $mail->isSMTP();                                            //Send using SMTP
+                    $mail->Host       = 'mail.kerberos.co.ke';                     //Set the SMTP server to send through
+                    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                    $mail->Username   = 'kerberos';                     //SMTP username
+                    $mail->Password   = 'meltdown6057';                               //SMTP password
+                    $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
+                    $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+                    //Recipients
+                    $mail->setFrom('support@kerberos.co.ke');
+                    $mail->addAddress("$email");
+
+                    //Content
+                    $mail->isHTML(true);                                  //Set email format to HTML
+                    $mail->Subject = 'no reply';
+                    $mail->Body    = 'Here is the verification link <b><a href="http://localhost/login/?verification='.$code.'">http://localhost/login/?verification='.$code.'</a></b>';
+
+                    $mail->send();
+                    echo 'Message has been sent';
+                } catch (Exception $e) {
+                    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                }
+                echo "</div>";
+                $msg = "<div class='alert alert-info'>We've send a verification link on your email address.</div>";
+            } else {
+                $msg = "<div class='alert alert-danger'>Something wrong went.</div>";
+            }
+        } else {
+            $msg = "<div class='alert alert-danger'>Password and Confirm Password do not match</div>";
+        }
+    }
+}
+?>
+
 <html>
 <head><title>login</title>
 <style>
