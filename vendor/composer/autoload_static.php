@@ -11,12 +11,20 @@ class ComposerStaticInit3a4979e6d13d7cd228935f33d7d3419c
         array (
             'Safaricom\\Mpesa\\' => 16,
         ),
+        'K' => 
+        array (
+            'Kabangi\\Mpesa\\' => 14,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Safaricom\\Mpesa\\' => 
         array (
             0 => __DIR__ . '/..' . '/safaricom/mpesa/src',
+        ),
+        'Kabangi\\Mpesa\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kabangi/mpesa/src/Mpesa',
         ),
     );
 

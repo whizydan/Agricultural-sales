@@ -79,7 +79,7 @@
 					<h2><?php echo $s['name'];?></h2>
 					<p>It's All for you.</p>					
 					<div class="price">
-						<p>Price: <span>Rs.<?php echo $x;?></span></p>
+						<p>Price: <span>Ksh.<?php echo $x;?></span></p>
 					</div>
 					<div class="available">
 						<p>Available Options :</p>

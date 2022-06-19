@@ -18,7 +18,7 @@ else
 {
 	include('module/header.php');
 
-	include('module/div2.php');
+	include('/module/div2.php');
 	
 include('module/footer.php');
 }

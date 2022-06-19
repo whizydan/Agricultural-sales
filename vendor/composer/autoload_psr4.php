@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Safaricom\\Mpesa\\' => array($vendorDir . '/safaricom/mpesa/src'),
+    'Kabangi\\Mpesa\\' => array($vendorDir . '/kabangi/mpesa/src/Mpesa'),
 );

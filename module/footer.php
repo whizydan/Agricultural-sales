@@ -1,5 +1,5 @@
 <div class="footer">
-   	 <!-- <div class="wrap">	
+   	 <div class="wrap">
 	     <div class="section group">
 				<div class="col_1_of_4 span_1_of_4">
 						<h4>Information</h4>
@@ -49,13 +49,13 @@
 						     </ul>
    	 					</div>
 				</div>
-			</div>			
-        </div>-->
+			</div>
+        </div>
         <div class="copy_right">
-        <div class="caption text-center"><p>Made with love at HackInfinity</p></div>
+        <div class="caption text-center"><p>Made with love</p></div>
 				<div class="caption text-center"><p>Copyright &copy<script type="text/javascript">
             document.write(new Date().getFullYear());
-        </script> Team 33 Hack Infinity. All Rights Reserved</p></div>
+        </script> Team Uptown-Fresh. All Rights Reserved</p></div>
 		   </div>
     </div>
 </body>
