@@ -1,10 +1,21 @@
+
+
+<?php
+{
+	include('./header.php');
+
+	
+	
+}
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="styles.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="../css/styles.css" rel="stylesheet" type="text/css" media="all"/>
 
-<title>Untitled Document</title>
+<title> UPTOWN FRESH</title>
 </head>
 
 <body>
@@ -13,9 +24,9 @@
     <div class="content">
     	<div class="section group">
 				<div class="col_1_of_3 span_1_of_3">
-					<h3>Who We Are</h3>
-					<img src="images/about_img.jpg" alt="">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<h3>UPTOWN FRESH</h3>
+					<img src="../images/about-us.webp" alt="">
+					<p>The Uptownfresh system is a platform designed to facilitate selling of agricultural foods</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 				</div>
 				<div class="col_1_of_3 span_1_of_3">
@@ -71,3 +82,8 @@
 
 </body>
 </html>
+<?php
+{
+include('./footer.php');
+}
+?>

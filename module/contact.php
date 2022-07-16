@@ -1,3 +1,14 @@
+<?php
+{
+	include('./header.php');
+	
+}
+ 
+
+
+
+?>
+
 <div class="wrap">
 <div class="main1">
     <div class="content">
@@ -5,7 +16,7 @@
 				<div class="col span_2_of_3">
 				  <div class="contact-form">
 					<h2>Contact Us</h2>
-						<form method="post" action="file:///C|/wamp/www/Shopping/contact-post.html">
+						<form method="post" action="../admin/contact-post.html">
 					    	<div>
 						    	<span><label>Name</label></span>
 						    	<span><input name="userName" type="text" class="textbox" ></span>
@@ -32,3 +43,8 @@
          </div>
      </div>
 </div>
+<?php
+{
+include('./footer.php');
+}
+?>

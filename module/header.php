@@ -1,4 +1,4 @@
-<?php
+ <?php
 	error_reporting(0);
 	session_start();
 	$hostname = 'localhost';
@@ -1156,11 +1156,11 @@ body {
 		<br>
 		<div class="header_top">
 			<div style="margin top:-10px"  class="logo">
-				<a href="index.php"><img src="images/logo.png" height="100px" width="100px" alt="" /></a>
+				<a href="index.php"><img src="../images/logo.png" height="100px" width="100px" alt="" /></a>
 			</div>
 			  <div style="float:right; margin-top:-25px">
-                  <a href="index.php?page=wishlist"><img style="height: 30px; width: 30px" src="images/wishlist.svg">
-                       <a href="index.php?page=cart"><img style="height: 30px; width: 30px" src="images/cart.svg"></a>
+                  <a href="index.php?page=wishlist"><img style="height: 30px; width: 30px" src="../images/wishlist.svg">
+                       <a href="index.php?page=cart"><img style="height: 30px; width: 30px" src="../images/cart.svg"></a>
 			  </div>
 			  <script type="text/javascript">
 			function DropDown(el) {
