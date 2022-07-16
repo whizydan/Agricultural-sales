@@ -18,7 +18,7 @@ $result = mysql_query($select, $con);
                 <?php
                 while ($r = mysql_fetch_array($result)) {
                     ?>
-                    <li><a href="index.php?page=display&id=<?php echo $r['id'] ?>"><?php echo $r['name'] ?></a></li>
+                     <li><a href="index.php?page=display&id=<?php echo $r['id'] ?>"><?php echo $r['name'] ?></a></li>
                     <?Php
                 }
                 ?>
@@ -117,7 +117,7 @@ $result = mysql_query($select, $con);
     <div class="content">
         <div class="content_top">
             <div class="heading">
-                <h3>New Products</h3>
+                 <h3>New Products</h3>
             </div>
             <div class="see">
                 <p><a href="index.php?page=display&id=0">See all Products</a></p>
